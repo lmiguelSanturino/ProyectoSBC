@@ -381,18 +381,17 @@ void tarea_enviar_datos_pantalla(void *parameters)
 		ESP_LOGI(TAG,"%f",volume);
 		
 		if(volume<=25000)
-			valor=0;
-		else if(volume>25000 && volume<=50000)
 			valor=1;
-		else if(volume>50000 && volume<=75000)
+		else if(volume>25000 && volume<=50000)
 			valor=2;
-		else
+		else if(volume>50000 && volume<=75000)
 			valor=3;
+		else
+			valor=4;
 		
 		
 		switch(valor)
 		{	
-			case 0:
 			case 1: 
 				ssd1306_bitmaps(&dev,5, y ,barra_vacia,32,13,false);
 				ssd1306_bitmaps(&dev,47,y,barra_vacia,32,13,false);
