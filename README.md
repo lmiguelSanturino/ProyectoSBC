@@ -18,6 +18,7 @@ Thingsboard : IoT
 
 Espressif SDK (ESP-IDF)
 
+
 You have to change MQTT params and Wifi params in main.
 
 Components folder has all the libraries used for the screen OLED, so if you don´t use this screen, this folder is not necessary for you. 
